@@ -152,7 +152,8 @@ body {
 	&__text {
 		text-align: center;
 		font-weight: 300;
-		font-size: 2.1rem;
+		padding: 1em;
+		font-size: 1.8rem;
 	}
 	&__btn {
 		background-color: colors.$secondary-color;
@@ -311,13 +312,13 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 3em;
+	padding: 1em;
 }
 
 .services-card {
 	position: relative;
 	height: 500px;
-	width: 500px;
+	width: 100%;
 	margin-bottom: 2em;
 
 	perspective: 800px;
@@ -429,8 +430,8 @@ body {
 	&__box {
 		position: relative;
 		height: 100%;
+		width: 100%;
 		
-		max-width: 60%;
 		
 		margin: 3em;
 		
@@ -445,9 +446,10 @@ body {
 
 		&-img {
 			position: absolute;
-			top: -60px;
-			left: 85%;
-			border-radius: 50%;
+		top: 7%;
+		left: 90%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
 			img {
 				height: 100px;
 				object-fit: cover;
@@ -456,11 +458,16 @@ body {
 			}
 		}
 		&-info {
-			padding: 1.5em;
+			padding: 2em;
 			
 		}
+		&-quote{
+			font-size: 3rem;
+		}
+		
+		
 		&-text {
-			margin-top: 0.5em;
+			margin-top: 1.5em;
 			font-size: 1.8rem;
 			color:colors.$secondary-color;
 			
