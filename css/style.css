@@ -222,7 +222,8 @@ body {
 .header__text {
   text-align: center;
   font-weight: 300;
-  font-size: 2.1rem;
+  padding: 1em;
+  font-size: 1.8rem;
 }
 .header__btn {
   background-color: rgba(79, 79, 82, 0.853);
@@ -362,13 +363,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3em;
+  padding: 1em;
 }
 
 .services-card {
   position: relative;
   height: 500px;
-  width: 500px;
+  width: 100%;
   margin-bottom: 2em;
   perspective: 800px;
 }
@@ -464,7 +465,7 @@ body {
 .reviews__box {
   position: relative;
   height: 100%;
-  max-width: 60%;
+  width: 100%;
   margin: 3em;
   background: #fff;
   border-radius: 8px;
@@ -476,8 +477,9 @@ body {
 }
 .reviews__box-img {
   position: absolute;
-  top: -60px;
-  left: 85%;
+  top: 7%;
+  left: 90%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 .reviews__box-img img {
@@ -488,10 +490,13 @@ body {
   border-radius: 50%;
 }
 .reviews__box-info {
-  padding: 1.5em;
+  padding: 2em;
+}
+.reviews__box-quote {
+  font-size: 3rem;
 }
 .reviews__box-text {
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   font-size: 1.8rem;
   color: rgba(79, 79, 82, 0.853);
 }
