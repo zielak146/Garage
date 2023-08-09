@@ -67,9 +67,7 @@ body {
 	}
 }
 
-.white-section{
-	background-color: colors.$pure-white;
-}
+
 
 .burger-btn {
 	position: fixed;
@@ -80,7 +78,8 @@ body {
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 100;
-	mix-blend-mode:difference;
+	mix-blend-mode: difference;
+	
 	&:focus {
 		outline: none;
 		border: 1px solid rgb(255, 255, 255, 0.5);
@@ -132,6 +131,10 @@ body {
 	to {
 		transform: translateX(0);
 	}
+}
+
+.black-bars-color, .black-bars-color::after, .black-bars-color::before{
+	background-color: colors.$dark;
 }
 
 // HEADER
@@ -202,12 +205,8 @@ body {
 		padding: 2em;
 
 		background: rgba(15, 52, 132, 0.953);
-		&:hover {
-			.mot__card-info {
-				transform: translateY(0);
-				opacity: 1;
-			}
-		}
+	
+	
 	}
 
 	&__card-img {
@@ -219,22 +218,38 @@ body {
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
-		transform: rotateY(0deg);
-		opacity: 1;
-		transition: transform 1s opacity 1s;
+		
+	}
+	&__card-icon{
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		color: colors.$pure-white;
+		font-size: 3rem;
+		z-index: 100;
+		cursor: crosshair;
+		transition: opacity 1s;
+		&:hover ~ .mot__card-info{
+			 
+				opacity: 1;
+			
+		}
 	}
 
 	&__card-info {
 		position: absolute;
+		display: flex;
+		flex-direction: column;
+		
 		top: 0;
 		right: 0;
 		left: 0;
 		bottom: 0;
-		background: colors.$blue-gradient-solid;
+		background:rgba(10, 38, 98, 0.953);
 		border-radius: 15px;
 		opacity: 0;
-		transform: translateY(-450px);
-		transition: transform 1s, opacity 1s;
+		
+		transition: opacity 1s;
 		&-heading {
 			text-align: center;
 			font-weight: 600;
@@ -243,10 +258,10 @@ body {
 			color: colors.$pure-white;
 		}
 		&-text {
+			padding: 2em;
+			font-weight: bold;
 			text-align: center;
-			margin-top: 10px;
-			font-weight: 600;
-			font-size: 8rem;
+			font-size: 2rem;
 			color: colors.$pure-white;
 		}
 	}
@@ -663,10 +678,11 @@ body {
 		}
 		&__card-info {
 			&-heading {
-				margin-top: 4em;
+				
+				font-size: 4rem;
 			}
 			&-text {
-				font-size: 10rem;
+				font-size: 3rem;
 			}
 		}
 
