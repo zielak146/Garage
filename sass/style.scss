@@ -67,6 +67,10 @@ body {
 	}
 }
 
+.white-section{
+	background-color: colors.$pure-white;
+}
+
 .burger-btn {
 	position: fixed;
 	top: 20px;
@@ -76,6 +80,7 @@ body {
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 100;
+	mix-blend-mode:difference;
 	&:focus {
 		outline: none;
 		border: 1px solid rgb(255, 255, 255, 0.5);
@@ -102,6 +107,7 @@ body {
 
 	&__bars {
 		width: 100%;
+		
 
 		&::before {
 			top: 13px;
@@ -479,6 +485,7 @@ body {
 }
 
 .contact{
+	position: relative;
 	&__boxes{
 		display:flex;
 		flex-direction: column;
@@ -504,6 +511,81 @@ body {
 		color:colors.$dark;
 	}
 }
+
+
+.footer{
+	position: relative;
+	overflow: hidden;
+	
+	padding:0 2em;
+	padding-top: 6em;
+	@include heroImages('../img/car.jpg');
+
+	&__boxes{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		gap: 30px;
+	
+	}
+
+	&__box{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+	}
+	&__box-desktop{
+		display: none;
+
+	
+	}
+	&__box-title{
+		color:colors.$pure-white;
+		font-size: 3rem;
+		margin-bottom: 0.5em;
+		font-weight: bold;
+	}
+	&__box-text{
+		color:colors.$pure-white;
+
+	}
+	&__box-list-item{
+		list-style: none;
+		a{
+			color:colors.$pure-white;
+			text-decoration: none;
+			font-size: 2.4rem;
+			
+		}
+		
+
+	}
+	&__box-link{
+		color:colors.$pure-white;
+		font-size: 3rem;
+		margin-right: 0.5em;
+	}
+
+	&__box-link, &__box-list-item a{
+		&:hover{
+			color: rgba(10, 38, 98, 0.953);
+		}
+	}
+	&__bottom-text{
+		color: colors.$pure-white;
+		text-align: center;
+		padding: 1em;
+		font-size: 3rem;
+	}
+	hr{
+		color: colors.$pure-white;
+	}
+	
+}
+
+
 
 // MEDIA/
 
@@ -536,6 +618,33 @@ body {
 	.services-card {
 		width: 30%;
 		margin: 1em;
+	}
+	.footer{
+		position: relative;
+		overflow: hidden;
+		@include heroImages('../img/car.jpg');
+	
+		&__boxes{
+		
+			flex-direction: row;
+			gap: 30px;
+			justify-content: space-around;
+			align-items: flex-start;
+		}
+		&__box{
+			width: 30%;
+			text-align: center;
+			
+			
+		}
+
+		
+		&__box-desktop{
+			
+			display: block;
+			
+		
+		}
 	}
 	
 }
@@ -594,6 +703,7 @@ body {
 		
 }
 .contact{
+	
 	&__boxes{
 		display:flex;
 		flex-direction: row;
